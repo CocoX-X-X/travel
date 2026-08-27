@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadtrip Asie</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="hero" id="hero">
+        <div class="hero-title">
+            <h1>Roadtrip&nbsp;Asie</h1>
+            <p class="hero-subtitle">un voyage au fil des routes</p>
+        </div>
+        <nav class="hero-menu" aria-label="Navigation">
+            <div class="hero-menu-right">
+                <button data-layer="galerie">Galerie</button>
+                <button data-layer="budget">Budget</button>
+            </div>
+        </nav>
+        <button class="cta" id="btn-go">Let's go&nbsp;&rarr;</button>
+    </section>
+
+    <section class="page" id="page" aria-hidden="true">
+        <button class="btn-back" data-home>&larr;&nbsp;Retour</button>
+        <button class="btn-theme" id="btn-theme" aria-label="Activer le mode nuit"></button>
+        <header class="page-header">
+            <p class="page-eyebrow">Le voyage</p>
+            <h2>Mon trip</h2>
+            <p class="page-desc">Trois mois sur la route, de Singapour à Dubaï : bus, trains et vols low-cost entre rizières de Bali, temples d'Angkor et skyline de Burj&nbsp;Khalifa.</p>
+            <div class="page-stats" id="page-stats"></div>
+            <div class="page-divider"><span></span><i></i><span></span></div>
+        </header>
+        <div class="map-wrap">
+            <div id="map"></div>
+        </div>
+        <main class="story-content" id="story-content"></main>
+        <footer class="page-foot">
+            <p>Et c'est ainsi que le voyage s'est terminé...</p>
+            <small>Fin du roadtrip</small>
+        </footer>
+    </section>
+
+    <section class="layer" id="galerie" aria-hidden="true">
+        <button class="btn-back" data-home>&larr;&nbsp;Accueil</button>
+        <header class="layer-head">
+            <h2>Galerie</h2>
+            <p class="layer-sub">Treize étapes, trois mois, en images.</p>
+        </header>
+        <div class="filters" id="filters"></div>
+        <div class="gallery" id="gallery"></div>
+    </section>
+
+    <section class="layer" id="budget" aria-hidden="true">
+        <button class="btn-back" data-home>&larr;&nbsp;Accueil</button>
+        <header class="layer-head">
+            <h2>Budget</h2>
+            <p class="layer-sub">Combien coûte un roadtrip asiatique&nbsp;?</p>
+        </header>
+        <div id="budget-content"></div>
+    </section>
+
+    <nav class="story-nav" id="story-nav" aria-label="Progression du récit"></nav>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lb-btn lb-close" id="lb-close" aria-label="Fermer">&times;</button>
+        <button class="lb-btn lb-prev" id="lb-prev" aria-label="Précédent">&lsaquo;</button>
+        <img id="lb-img" src="" alt="">
+        <p class="lb-caption" id="lb-caption"></p>
+        <button class="lb-btn lb-next" id="lb-next" aria-label="Suivant">&rsaquo;</button>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
